@@ -1,0 +1,21 @@
+{
+  "runtime": {
+    "python": "3.13.5",
+    "compiler": "GCC 16.2.0 (WinLibs) -std=c++17 -O2",
+    "system": "Windows-11-10.0.26200-SP0"
+  },
+  "results": {
+    "demo_k_relative_error": 0.0035,
+    "demo_cost": 11.526,
+    "noise_floor": 10.8,
+    "jacobian_vs_central_differences": "< 5e-5 relative",
+    "noise_free_recovery": "< 1e-7 across 3 parameter sets",
+    "noisy_k_band": "within 5% at sigma=0.3 K, n=120",
+    "flat_start_behavior": "ILL_CONDITIONED (honest failure), non-flat poor starts converge"
+  },
+  "animation": {
+    "file": "fit_convergence.gif",
+    "frames": 41,
+    "content": "recorded LM budget-refit sequence: each frame is the fitted curve at that iteration count"
+  }
+}
