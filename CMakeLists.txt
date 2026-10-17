@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.16)
+project(cooling_curve_inverse LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+add_library(lm_fit STATIC src/lm_fit.cpp)
+target_include_directories(lm_fit PUBLIC src)
+if(MSVC)
+    target_compile_options(lm_fit PRIVATE /W4)
+else()
+    target_compile_options(lm_fit PRIVATE -Wall -Wextra -Wpedantic)
+endif()
+
+add_executable(test_lm_fit tests/test_lm_fit.cpp)
+target_link_libraries(test_lm_fit PRIVATE lm_fit)
+if(MSVC)
+    target_compile_options(test_lm_fit PRIVATE /W4)
+else()
+    target_compile_options(test_lm_fit PRIVATE -Wall -Wextra -Wpedantic)
+endif()
+
+enable_testing()
+add_test(NAME lm_fit_checks COMMAND test_lm_fit)
+
+add_executable(cooling_demo src/cooling_demo.cpp)
+target_link_libraries(cooling_demo PRIVATE lm_fit)
+if(MSVC)
+    target_compile_options(cooling_demo PRIVATE /W4)
+else()
+    target_compile_options(cooling_demo PRIVATE -Wall -Wextra -Wpedantic)
+endif()
