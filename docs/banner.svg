@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Cooling Curve Inverse banner">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22303c"/>
+      <stop offset="1" stop-color="#10171e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#steel)"/>
+  <!-- cooling curve + data + fit on LEFT -->
+  <g transform="translate(80,45)">
+    <!-- axes -->
+    <line x1="30" y1="20" x2="30" y2="190" stroke="#6a7f8f" stroke-width="2"/>
+    <line x1="30" y1="190" x2="520" y2="190" stroke="#6a7f8f" stroke-width="2"/>
+    <text x="36" y="18" fill="#9fb5c4" font-family="Consolas, monospace" font-size="14">T(t)</text>
+    <text x="500" y="212" fill="#9fb5c4" font-family="Consolas, monospace" font-size="14">t</text>
+    <!-- asymptote -->
+    <line x1="30" y1="150" x2="520" y2="150" stroke="#3f5a6d" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="420" y="144" fill="#5f7f93" font-family="Consolas, monospace" font-size="13">T_amb</text>
+    <!-- noisy data points -->
+    <g fill="#8fb8d8" opacity="0.9">
+      <circle cx="50" cy="52" r="3.5"/><circle cx="76" cy="60" r="3.5"/><circle cx="102" cy="72" r="3.5"/>
+      <circle cx="128" cy="78" r="3.5"/><circle cx="154" cy="92" r="3.5"/><circle cx="180" cy="96" r="3.5"/>
+      <circle cx="206" cy="108" r="3.5"/><circle cx="232" cy="112" r="3.5"/><circle cx="258" cy="122" r="3.5"/>
+      <circle cx="284" cy="128" r="3.5"/><circle cx="310" cy="132" r="3.5"/><circle cx="336" cy="140" r="3.5"/>
+      <circle cx="362" cy="144" r="3.5"/><circle cx="388" cy="142" r="3.5"/><circle cx="414" cy="148" r="3.5"/>
+      <circle cx="440" cy="146" r="3.5"/><circle cx="466" cy="152" r="3.5"/>
+    </g>
+    <!-- fitted curve through them -->
+    <path d="M 45 48 C 140 66, 240 108, 330 136 C 400 152, 460 152, 520 151" stroke="#e8b04b" stroke-width="3.5" fill="none"/>
+    <text x="120" y="180" fill="#e8b04b" font-family="Consolas, monospace" font-size="14">fit: T_amb + (T0−T_amb)e^(−kt)</text>
+    <text x="360" y="60" fill="#8fb8d8" font-family="Consolas, monospace" font-size="13">seeded σ = 0.3 K data</text>
+  </g>
+  <!-- wordmark RIGHT -->
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="650" y="105" fill="#ffffff" font-size="46" font-weight="800" letter-spacing="0.5">Cooling <tspan fill="#8fb8d8">Curve</tspan> <tspan fill="#e8b04b">Inverse</tspan></text>
+    <text x="652" y="148" fill="#9fb5c4" font-size="20">C++ Levenberg–Marquardt · analytic Jacobian · honest failures</text>
+    <text x="652" y="184" fill="#5f7f93" font-family="Consolas, monospace" font-size="14">(JᵀJ + μD)δ = −Jᵀr · gain-ratio μ update</text>
+  </g>
+</svg>
