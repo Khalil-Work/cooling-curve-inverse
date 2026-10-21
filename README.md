@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="Cooling Curve Inverse banner: steel-blue panel with noisy cooling data and fitted exponential" width="100%">
+<img src="docs/banner.png" alt="Cooling Curve Inverse banner: steel-blue panel with noisy cooling data and fitted exponential" width="100%">
 
 # 🌡️ Cooling Curve Inverse
 
@@ -60,12 +60,12 @@ Full derivation: [docs/model.md](docs/model.md); API: [docs/api.md](docs/api.md)
 flowchart TD
     A[parameters theta] --> B[residuals r,<br/>analytic J]
     B --> C[solve JᵀJ + μD δ = −Jᵀr]
-    C --> D{trial step keeps<br/>k > 0 domain?}
+    C --> D{"trial step keeps<br/>k > 0 domain?"}
     D -- no --> E[increase μ,<br/>retry]
-    D -- yes --> F{cost decreased?<br/>gain ratio}
+    D -- yes --> F{"cost decreased?<br/>gain ratio"}
     F -- yes --> G[accept step,<br/>decrease μ]
     F -- no --> E
-    G --> H{gradient/step/budget<br/>tolerance met?}
+    G --> H{"gradient/step/budget<br/>tolerance met?"}
     H -- yes --> I[✅ status + reason]
     H -- no --> A
 ```
