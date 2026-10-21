@@ -11,12 +11,12 @@ Jacobian validated against finite differences, exact noise-free recovery to 1e-7
 honest ill-conditioning and budget-exhaustion failures, and 0.35% k-recovery on a
 seeded noisy curve.**
 
-[![tests](https://github.com/khalil-official/cooling-curve-inverse/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-official/cooling-curve-inverse/actions/workflows/ci.yml)
+[![tests](https://github.com/khalil-work/cooling-curve-inverse/actions/workflows/ci.yml/badge.svg)](https://github.com/khalil-work/cooling-curve-inverse/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)](src)
 [![recovery](https://img.shields.io/badge/noise--free%20recovery-%3C%201e--7-orange.svg)](docs/verification.md)
-[![repo stars](https://img.shields.io/github/stars/khalil-official/cooling-curve-inverse?style=flat&color=yellow)](https://github.com/khalil-official/cooling-curve-inverse/stargazers)
-[![last commit](https://img.shields.io/github/last-commit/khalil-official/cooling-curve-inverse?color=9cf)](https://github.com/khalil-official/cooling-curve-inverse/commits)
+[![repo stars](https://img.shields.io/github/stars/khalil-work/cooling-curve-inverse?style=flat&color=yellow)](https://github.com/khalil-work/cooling-curve-inverse/stargazers)
+[![last commit](https://img.shields.io/github/last-commit/khalil-work/cooling-curve-inverse?color=9cf)](https://github.com/khalil-work/cooling-curve-inverse/commits)
 
 [Quick start](#-quick-start) · [Method](#-method-and-safeguards) · [Animation](#%EF%B8%8F-results-gallery) · [Metrics](#-results-and-metrics) · [References](#-references)
 
